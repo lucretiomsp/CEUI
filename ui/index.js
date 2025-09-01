@@ -1,10 +1,10 @@
 // modification of index.js from the Tremolo patch of Cmajor github examples
 // import { createView } from "./stompbox/minimalView.js";
 import { createBackground, createSmallKnobDiv } from "./assets/viewHelper.js";
-import { makeRotatable } from "./assets/viewHelper.js";
-import { knobConfigs} from "./knobConfigs.js";
-// import knobConfigs from './knobConfigs.json' assert { type: 'json' };
-import { bgConfig} from "./knobConfigs.js";
+
+import { knobConfigs} from "./uiConfig.js";
+;
+import { bgConfig} from "./uiConfig.js";
 
 export default function createPatchView (patchConnection)
 {
