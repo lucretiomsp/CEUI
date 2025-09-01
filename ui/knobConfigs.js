@@ -1,0 +1,13 @@
+// stompbox/knobConfigs.js
+export const knobConfigs = [
+    { name: "rate", endpointID: "rate", left: "50px", top: "24px", width: "70px" , height: "70px" , image: "./big-knob-flat.svg" },
+    { name: "depth", endpointID: "depth", left: "180px", top: "24px", width: "70px" , height: "70px" , image: "./big-knob-flat.svg" },
+    { name: "wave", endpointID: "shape", left: "120px", top: "24px", width: "40px" , height: "40px" , image: "./smaller-knob-flat.svg" },
+];
+
+
+export const  bgConfig = {
+    image: "./enclosure.svg",
+    width: 300,
+    height: 500
+};
