@@ -3,6 +3,10 @@
     This simple web component just manually creates a set of plain sliders for the
     known parameters, and uses some listeners to connect them to the patch.
 */
+
+
+
+
 class DemoView extends HTMLElement
 {
     constructor (patchConnection)

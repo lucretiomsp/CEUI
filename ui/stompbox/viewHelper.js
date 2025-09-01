@@ -1,3 +1,5 @@
+// modification of view.js from the Tremolo patch of Cmajor github examples
+
 // needed functions
 function setValueAsGesture (value, { onBeginEdit, onEdit, onEndEdit })
 {

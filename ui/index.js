@@ -1,3 +1,4 @@
+// modification of index.js from the Tremolo patch of Cmajor github examples
 // import { createView } from "./stompbox/minimalView.js";
 import { createBackground, createSmallKnobDiv } from "./stompbox/viewHelper.js";
 import { makeRotatable } from "./stompbox/viewHelper.js";
