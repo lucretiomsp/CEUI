@@ -1,6 +1,3 @@
-// this file contains a modification of index.js 
-// from the Tremolo sample patch of the Cmajor github
-
 // import { createView } from "./stompbox/minimalView.js";
 import { createBackground, createSmallKnobDiv } from "./stompbox/viewHelper.js";
 import { makeRotatable } from "./stompbox/viewHelper.js";
@@ -74,6 +71,20 @@ container.appendChild(background);
             param.subscribe(skd.update);
         });
     
+
+
+
+        // create knob bound to "rate" parameter
+        // const rateParam = toParameter("rate");
+        // const myKnob = createSmallKnobDiv(rateParam);
+        // container.appendChild(myKnob.elm);
+
+        // subscribe knob to parameter updates (UI follows DSP state)
+        // rateParam.subscribe(myKnob.update);
+    
+
+
+
 
     });
 
