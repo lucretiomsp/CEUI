@@ -146,18 +146,24 @@ function resolvePath (path)
     return new URL (path, import.meta.url);
 }
 
-export function createSmallKnobDiv(parameter, { left = "0px", top = "0px", width = "50px" , height = "50px" ,  image = "./big-knob-flat.svg" } = {}) {
+export function createSmallKnobDiv(parameter, { 
+    left = 0, 
+    top = 0, 
+    width = 70, 
+    height = 70,  
+    image = "./big-knob-flat.svg" 
+} = {}) {
     const skd = {};
     skd.elm = document.createElement("div");
-    skd.elm.className = "knob"; // better than reusing id
+    skd.elm.className = "knob";
     skd.elm.style.position = "absolute";
-    skd.elm.style.left = left;
-    skd.elm.style.top = top;
-    skd.elm.style.width = width;
-    skd.elm.style.height = height;
+    skd.elm.style.left = left + "px";
+    skd.elm.style.top = top + "px";
+    skd.elm.style.width = width + "px";
+    skd.elm.style.height = height + "px";
     skd.elm.style.backgroundSize = "cover";
     skd.elm.style.backgroundImage = `url('${resolvePath(image)}')`;
- skd.elm.style.backgroundRepeat = "no-repeat";
+    skd.elm.style.backgroundRepeat = "no-repeat";
 
     // make knob rotatable AND bind it to parameter lifecycle
     skd.update = makeRotatable({
@@ -174,6 +180,7 @@ export function createSmallKnobDiv(parameter, { left = "0px", top = "0px", width
 
     return skd;
 }
+
 
 export  function createKnobSetup(paramName, knobId) {
     return (parameters) => setupAndSubscribe(
