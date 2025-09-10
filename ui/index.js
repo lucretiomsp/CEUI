@@ -1,10 +1,14 @@
 // modification of index.js from the Tremolo patch of Cmajor github examples
 // import { createView } from "./stompbox/minimalView.js";
-import { createBackground, createSmallKnobDiv } from "./assets/viewHelper.js";
+import { createBackground, createSmallKnobDiv , createFaderDiv } from "./assets/viewHelper.js";
 
 import { knobConfigs} from "./uiConfig.js";
-;
+
 import { bgConfig} from "./uiConfig.js";
+
+import { faderConfigs} from "./uiConfig.js";
+
+
 
 export default function createPatchView (patchConnection)
 {
@@ -71,21 +75,25 @@ container.appendChild(background);
             // subscribe knob to backend updates
             param.subscribe(skd.update);
         });
-    
+      
+    faderConfigs.forEach((cfg) => {
+    const param = toParameter(cfg.endpointID);
 
+    const fdr = createFaderDiv(param, {
+        left: cfg.left,
+        top: cfg.top,
+        width: cfg.width,
+        height: cfg.height,
+        bgimage: cfg.bgimage,
+        bgthumb: cfg.bgthumb,
+        isHorizontal: cfg.isHorizontal,
+    });
 
+    container.appendChild(fdr.elm);
 
-        // create knob bound to "rate" parameter
-        // const rateParam = toParameter("rate");
-        // const myKnob = createSmallKnobDiv(rateParam);
-        // container.appendChild(myKnob.elm);
-
-        // subscribe knob to parameter updates (UI follows DSP state)
-        // rateParam.subscribe(myKnob.update);
-    
-
-
-
+    // subscribe fader to backend updates
+    param.subscribe(fdr.update);
+});
 
     });
 
