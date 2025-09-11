@@ -14,6 +14,7 @@ export const  bgConfig = {
     height: 500
 };
 
+// image is background image for the fader
 export const faderConfigs = [
     { 
         name: "rate", 
@@ -22,7 +23,7 @@ export const faderConfigs = [
         top: "24px", 
         width: "140px", 
         height: "40px", 
-        bgimage: "./faderbg.png", 
+        image: "./faderbg.png", 
         bgthumb: "./faderthumb.png", 
         isHorizontal: true 
     },
@@ -33,7 +34,7 @@ export const faderConfigs = [
         top: "24px", 
         width: "40px", 
         height: "140px", 
-        bgimage: "./faderbg.png", 
+        image: "./faderbg.png", 
         bgthumb: "./faderthumb.png", 
         isHorizontal: false 
     }

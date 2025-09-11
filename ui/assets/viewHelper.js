@@ -220,8 +220,8 @@ export function createFaderDiv(parameter, {
     top = "0px",
     width = "40px",
     height = "100px",
-   bgimage = "./faderbg.png",
-   bgthumb = "./faderthumb.png",
+    image = "./faderbg.png",
+    bgthumb = "./faderthumb.png",
     isHorizontal = false
 } = {}) {
     const fader = {};
@@ -231,7 +231,7 @@ export function createFaderDiv(parameter, {
     fader.elm.style.top = top;
     fader.elm.style.width = width;
     fader.elm.style.height = height;
-    fader.elm.style.backgroundImage = `url('${resolvePath(bgimage)}')`;
+    fader.elm.style.backgroundImage = `url('${resolvePath(image)}')`;
     fader.elm.style.backgroundSize = "cover";
     fader.elm.style.backgroundRepeat = "no-repeat";
 
